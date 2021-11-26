@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>resources/images/titlebar/close.png</file>
+        <file>resources/images/titlebar/close-hover.png</file>
+        <file>resources/images/titlebar/help.png</file>
+        <file>resources/images/titlebar/help-hover.png</file>
+        <file>resources/images/titlebar/minimum.png</file>
+        <file>resources/images/titlebar/minimum-hover.png</file>
+        <file>resources/images/titlebar/titleicon.png</file>
+    </qresource>
+</RCC>

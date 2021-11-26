@@ -1,0 +1,50 @@
+[
+    {
+        "Authentication": "Administrator",
+        "Identity": "",
+        "Password": "wjbsa?",
+        "Username": "Admin"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "12345678912345678x",
+        "Password": "pwdpwd",
+        "Username": "丁真"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "987654323123456780",
+        "Password": "pwdpwd123",
+        "Username": "装觉止"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "777777777888888888",
+        "Password": "qwerty",
+        "Username": "炳炎蛇"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "123456789098765432",
+        "Password": "qwerty",
+        "Username": "和银行"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "12345678912345678x",
+        "Password": "poiuyt",
+        "Username": "asdf"
+    },
+    {
+        "Authentication": "TicketSeller",
+        "Identity": "",
+        "Password": "qwerty",
+        "Username": "ts"
+    },
+    {
+        "Authentication": "Passenger",
+        "Identity": "340202024001377144",
+        "Password": "qwerty",
+        "Username": "🐖"
+    }
+]
