@@ -101,18 +101,26 @@ bool queryHelper::dealWithTicket(long long _pattern, const QString &_ind)
             if (_Obj["Index"].toString() == _ind)
             {
                 _found = true;
+                auto _ab = QTime::fromString(_Obj["Abfahrt"].toString(), "HH:mm");
                 auto _rem = _Obj["Remainder"].toString().toInt();
-                auto _cap = _Obj["Capacity"].toInt();
-                if (_rem != _cap)
+                auto _cap = _Obj["Capacity"].toString().toInt();
+                auto _cur = QTime::currentTime();
+                if (_rem < _cap && _cur.secsTo(_ab) > 7200)
                 {
                     _Obj["Remainder"] = QString::number(_rem + 1);
                     _fl = _Obj;
                     is_success = true;
                 }
-                else
+                else if (_rem == _cap)
                 {
                     _message_sender->setWindowTitle("退票失败！");
-                    _message_sender->setText("这个班次没有人买票！");
+                    _message_sender->setText("这个班次没有人买票！怎么退？");
+                    _message_sender->show();
+                }
+                else if (_cur.secsTo(_ab) <= 7200)
+                {
+                    _message_sender->setWindowTitle("退票失败！");
+                    _message_sender->setText("已经超过最后的退票时间！");
                     _message_sender->show();
                 }
                 break;

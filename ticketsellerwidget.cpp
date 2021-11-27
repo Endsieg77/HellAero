@@ -5,7 +5,7 @@ ticketSellerWidget::ticketSellerWidget(queryHelper *_Qh, QWidget *caller, QWidge
     : QWidget(parent), _query_helper {_Qh}, _caller {caller}
 {
     setWindowFlag(Qt::FramelessWindowHint);
-    setFixedSize(1090, 800);
+    setFixedSize(1090, 820);
 
     _window_hint = new TitleBar("售票系统", this);
     _table       = _query_helper->_generateWidget();
@@ -33,14 +33,14 @@ ticketSellerWidget::ticketSellerWidget(queryHelper *_Qh, QWidget *caller, QWidge
     _ind_edit_layout->addWidget(_sell);
     _ind_edit_layout->addWidget(_cancel);
 
-    _functional_layout = new QVBoxLayout;
-    _functional_layout->addLayout(_ind_edit_layout);
-    _functional_layout->addWidget(_zuruck);
+    _zuruck_layout = new QHBoxLayout;
+    _zuruck_layout->addWidget(_zuruck);
 
     _main_layout = new QVBoxLayout(this);
     _main_layout->addWidget(_window_hint);
     _main_layout->addWidget(_scrollable);
-    _main_layout->addLayout(_functional_layout);
+    _main_layout->addLayout(_ind_edit_layout);
+    _main_layout->addLayout(_zuruck_layout);
     _main_layout->setMargin(0);
 
     connect(_sell, &QAbstractButton::clicked, this, &ticketSellerWidget::onSellClicked);

@@ -4,14 +4,14 @@
 queryWidget::queryWidget(queryHelper *_Qh, QWidget *caller, bool _editable, QWidget *parent)
     : QWidget(parent), _query_helper{_Qh}, _caller {caller}, _editable {_editable}
 {
-    setFixedSize(1090, 800);
+    setFixedSize(1090, 820);
     setWindowFlag(Qt::FramelessWindowHint);
 
     _window_hint = new TitleBar("航班信息查询", this);
 
     _query_edit = new QLineEdit(this);
     _query_edit->setPlaceholderText("输入您想查询航班的信息");
-    _query_edit->setFixedWidth(600);
+    _query_edit->setFixedWidth(700);
     _query_edit->setMaxLength(40);
 
     _query = new QToolButton(this);
@@ -33,13 +33,19 @@ queryWidget::queryWidget(queryHelper *_Qh, QWidget *caller, bool _editable, QWid
     _zuruck->setText("返回上个页面");
     _zuruck->setObjectName("login-btn");
 
+    _zuruck_line = new QHBoxLayout;
+    _zuruck_line->addWidget(_zuruck);
+
     _main_layout = new QVBoxLayout(this);
     _main_layout->addWidget(_window_hint);
     _main_layout->addLayout(_query_line);
     _main_layout->addWidget(_scrollable);
-    _main_layout->addWidget(_zuruck);
+    _main_layout->addLayout(_zuruck_line);
     _main_layout->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
     _main_layout->setMargin(0);
+
+    _zuruck_line->setMargin(0);
+    _zuruck_line->setSpacing(250);
 
     connect(_query_edit, &QLineEdit::returnPressed, this, &queryWidget::onQueryClicked);
     connect(_zuruck, &QAbstractButton::clicked, this, &queryWidget::onZuruckClicked);

@@ -28,6 +28,7 @@ private:
 
     QBoxLayout
         *_query_line,
+        *_zuruck_line,
         *_main_layout;
 
     QAbstractButton

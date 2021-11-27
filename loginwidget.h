@@ -47,13 +47,9 @@ private:
         *_forgot_pwd,
         *_login;
 
-    QBoxLayout
-        *_main_layout;
-
+    QBoxLayout *_main_layout;
     QGridLayout *_grid;
-
     MyDialog *message_sender;
-
     queryHelper *_query_helper;
 
     void clearLineEdit();

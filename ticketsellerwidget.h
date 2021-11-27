@@ -33,7 +33,7 @@ private:
         *_zuruck;
     QBoxLayout
         *_ind_edit_layout,
-        *_functional_layout,
+        *_zuruck_layout,
         *_main_layout;
 
 private slots:

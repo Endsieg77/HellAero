@@ -11,8 +11,8 @@ MyDialog::MyDialog(const QString &text, const QString &title, QWidget *parent)
     setFixedSize(QApplication::desktop()->width() * 0.35, QApplication::desktop()->height() * 0.30);
 
     windowTitle = new TitleBar(title, this);
-    textLabel = new QLabel(this);
-    confirm = new QPushButton("确定", this);
+    textLabel   = new QLabel(this);
+    confirm     = new QPushButton("确定", this);
     confirm->setObjectName("login-btn");
 
     textLabel->setStyleSheet("font-size: 20px; color: rgb(117, 109, 109);");

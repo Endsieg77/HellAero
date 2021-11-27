@@ -50,7 +50,7 @@
         "Capacity": "270",
         "Duration": "2:00",
         "Index": "ab1234",
-        "Remainder": "261",
+        "Remainder": "264",
         "Von": "新日暮里"
     },
     {
@@ -61,15 +61,6 @@
         "Index": "cv3456",
         "Remainder": "43",
         "Von": "NYC"
-    },
-    {
-        "Abfahrt": "21:45",
-        "Bis": "Def",
-        "Capacity": "25",
-        "Duration": "7:58",
-        "Index": "ab1245",
-        "Remainder": "24",
-        "Von": "Abc"
     },
     {
         "Abfahrt": "22:33",
